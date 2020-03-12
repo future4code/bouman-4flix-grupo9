@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { CreateFilmUC } from "../../../business/usecase/films/createFilm";
 import { FilmDB } from "../../../data/filmDB";
 
-export const createFilmEndpoit = async (req: Request, res: Response) => {
+export const createFilmEndpoint = async (req: Request, res: Response) => {
     try {
         const createFilmUC = new CreateFilmUC(new FilmDB())
         const result = await createFilmUC.execute({
