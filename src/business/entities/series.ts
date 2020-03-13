@@ -1,13 +1,16 @@
+import moment from "moment"
+import { Episodes } from "./episodes";
+
 export class Series {
     constructor(
         private id: string,
         private title: string,
-        private date: Date,
+        private premiere_date: string,
         private synopsis: string,
         private link: string,
-        private picture: string,
-        private episodes: episode[] 
+        private picture: string
     ) { }
+
     public getId(): string {
         return this.id;
     }
@@ -24,20 +27,12 @@ export class Series {
         this.title = title;
     }
 
-    public getDate(): Date {
-        return this.date;
+    public getPremiereDate(): string {
+        return moment(this.premiere_date).format('DD/MM/YYYY')
     }
 
-    public setDate(date: Date): void {
-        this.date = date;
-    }
-
-    public getLength(): string {
-        return this.length;
-    }
-
-    public setLength(length: string): void {
-        this.length = length;
+    public setPremiereDate(premiere_date: string): void {
+        this.premiere_date = premiere_date;
     }
 
     public getSynopsis(): string {
@@ -62,5 +57,4 @@ export class Series {
     public setPicture(picture: string): void {
         this.picture = picture;
     }
-
 } 
