@@ -16,8 +16,7 @@ export class GetSeriesByIdUC {
             premiere_date: response?.getPremiereDate(),
             synopsis: response?.getSynopsis(),
             link: response?.getLink(),
-            picture: response?.getPicture(),
-            episodes: response?.getEpisodes()
+            picture: response?.getPicture()
         }
     }
 }
@@ -32,5 +31,4 @@ export interface GetSeriesByIdUCOutput {
     synopsis: string | undefined;
     link: string | undefined;
     picture: string | undefined;
-    episodes: Episodes[] | undefined
 }

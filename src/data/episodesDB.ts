@@ -14,8 +14,8 @@ export class EpisodesDB extends BaseDB {
                 '${episodes.getLength()}',
                 '${episodes.getLink()}',
                 '${episodes.getPicture()}',
-                '${episodes.getSynopsis()}',
-                '${episodes.getSeries().getId()}'
+                "${episodes.getSynopsis()}",
+                '${episodes.getSeriesId()}'
             );
         `)
     }

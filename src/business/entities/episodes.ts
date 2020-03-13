@@ -8,7 +8,7 @@ export class Episodes {
         private link: string,
         private synopsis:string,
         private picture:string,
-        private series:Series,
+        private series_id:string,
     ) {}
 
     public getId():string {
@@ -51,12 +51,12 @@ export class Episodes {
         this.synopsis = synopsis
     }
 
-    public getSeries():Series {
-        return this.series
+    public getSeriesId():string {
+        return this.series_id
     }
 
-    public setSerieId(series:Series):void{
-        this.series = series
+    public setSerieId(series_id:string):void{
+        this.series_id = series_id
     }
 
     public getPicture():string{

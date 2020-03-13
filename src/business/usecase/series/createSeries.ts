@@ -1,8 +1,9 @@
-import { SeriesDB } from "../../../data/seriesDB";
 import { Episodes } from "../../entities/episodes";
 import { v4 } from "uuid";
 import { Series } from "../../entities/series";
 import { EpisodesDB } from "../../../data/episodesDB";
+import { SeriesDB } from "../../../data/seriesDB";
+
 
 export class CreateSeriesUC {
     constructor(private dbSeries: SeriesDB, private dbEpisodes: EpisodesDB) { }
@@ -42,9 +43,8 @@ export class CreateSeriesUC {
                 inputEpisode.link,
                 inputEpisode.synopsis,
                 inputEpisode.picture,
-                series
+                idSeries
             )
-            console.log(episodeOfSeries)
             await this.dbEpisodes.createEpisodes(episodeOfSeries)
         } )
 
