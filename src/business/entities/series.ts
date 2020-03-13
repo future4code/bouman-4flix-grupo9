@@ -8,7 +8,8 @@ export class Series {
         private premiere_date: string,
         private synopsis: string,
         private link: string,
-        private picture: string
+        private picture: string,
+        private episodes: Episodes[]
     ) { }
 
     public getId(): string {
@@ -56,5 +57,12 @@ export class Series {
 
     public setPicture(picture: string): void {
         this.picture = picture;
+    }
+    public getEpisodes(): Episodes[] {
+        return this.episodes;
+    }
+
+    public setEpisodes(episodes: Episodes[]): void {
+        this.episodes = episodes;
     }
 } 
