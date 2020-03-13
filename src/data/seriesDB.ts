@@ -29,7 +29,7 @@ export class SeriesDB extends BaseDB {
         const result = await this.connection.raw(`
             SELECT * FROM ${this.seriesTableName}
             JOIN ${this.episodesTableName} ON ${this.episodesTableName}.series_id = ${this.seriesTableName}.id 
-            WHERE series.id like "${id}"
+            WHERE series.id = "${id}"
         `)
 
         const series = new Series(
